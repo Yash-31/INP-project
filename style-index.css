@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=EB+Garamond:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+:root{
+    font-size: 20px;
+    --text-color-primary:#deecff;
+    --text-color-hover: #aed0ff;
+    --background-color : #202060;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    font-family: 'Dancing Script',cursive;
+    color: var(--text-color-primary);
+}
+
+.landing{
+    min-height: 100vh;
+    background: url("./images/annie-spratt-KcpQKqYmvGE-unsplash.jpg");
+    background-size: cover;
+    padding: 0rem 5rem;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    min-height: 15vh;
+    align-items: center;
+}
+.nav-links{
+    display: flex;
+    list-style: none;
+    
+}
+.nav-links li{
+    align-items: center;
+    padding: 0rem 1.5rem;
+    transition: .2s;
+    }
+.nav-links li:hover{
+    color: var(--text-color-hover);
+    border-bottom: 2px solid var(--text-color-hover);
+}
+.introduction{
+    font-family: 'Roboto Slab', serif;
+
+    display: flex;
+    align-items: center;
+
+    background-color:#223a3b4f ;
+
+    margin-top: 6rem;
+    margin-left: 10rem;
+    width: max-content;
+    padding-right:10rem ;
+    
+    height: max-content;
+    padding: 1rem;
+
+    box-shadow: 0rem 3rem 3rem #000000;
+}
+.introduction h1{
+    
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+.introduction button{
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    margin-left: 3rem;
+    padding: 1rem;
+    height: max-content;
+    width: max-content;
+
+    background: none;
+    border: 0.2rem solid var(--text-color-primary) ;
+    color:var(--text-color-primary) ;
+    font-family: 'Roboto Slab', serif;
+}
+.introduction button:hover{
+    background: var(--text-color-primary);
+    color: #1d4d4f;
+    box-shadow: 0 0 2.5rem var(--text-color-hover);
+}
+.introduction img{
+    height: 13rem;
+    width: auto;
+    margin-left: 5rem;
+    box-shadow: 0 0 3rem #000000;
+}
+
+.intro{
+    background: #1d4d4f;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.intro-text{
+    color: var(--text-color-primary);
+    font-family: 'EB Garamond', serif;
+    font-size: 2rem;
+}
+.slider{
+    background: #357376;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    transform: translatex(100%);
+  }
+.hide{
+    background: #1d4d4f;
+    overflow: hidden;
+} 
+.hide span{
+    display: inline-block;
+    transform: translateY(100%);
+}
+ 
