@@ -28,14 +28,17 @@ main{
 }
 nav{
     display: flex;
-    justify-content: space-between;
+    
     font-size: 1.5rem;
     min-height: 15vh;
     align-items: center;
+    
 }
 .nav-links{
     display: flex;
     list-style: none;
+    width: 100%;
+
     
 }
 .nav-links li{
@@ -57,7 +60,7 @@ nav{
 
     margin-top: 6rem;
     margin-left: 10rem;
-    width: max-content;
+    width: 70%;
     padding-right:10rem ;
     
     height: max-content;
