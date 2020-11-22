@@ -1,0 +1,9 @@
+REG_PG
+userreg/custreg (userid, fname, lname, mobno, pass) //login to be done with mobno and pass// //email opt to be added or not//
+admin(adminid, fname, lname, mail, mobno, pass)//this already exists// //admin login with mail//
+
+POST
+post(postid, ptitle, pinfo, upvotes)
+
+COMMENTS
+comments(postid, pinfo, comnt)
