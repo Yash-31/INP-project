@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=EB+Garamond:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+:root{
+    font-size: 20px;
+    --text-color-primary:#deecff;
+    --text-color-hover: #aed0ff;
+    --background-color : #202060;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.landing{
+    min-height: 100vh;
+    background: url("./images/annie-spratt-KcpQKqYmvGE-unsplash.jpg");
+    background-size: cover;
+    padding: 0rem 5rem;
+}
+.main{
+    position: absolute;
+    font-family: 'Roboto Slab', serif;
+    color: var(--text-color-primary);
+    
+
+    background-color:#223a3b4f ;
+
+    margin-top: 6rem;
+    margin-left: 10rem;
+    width: 70%;
+    padding-right:10rem ;
+    
+    height: max-content;
+    
+
+    box-shadow: 0rem 3rem 3rem #000000;
+}
+.main > h1{
+    padding-left: 50%;
+}
+.main > p{
+    
+}
