@@ -1,0 +1,19 @@
+{
+  "name": "inp-project",
+  "version": "1.0.0",
+  "description": "hello\r world",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rvp39/INP-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rvp39/INP-project/issues"
+  },
+  "homepage": "https://github.com/rvp39/INP-project#readme"
+}
