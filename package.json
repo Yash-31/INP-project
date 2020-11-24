@@ -4,7 +4,7 @@
   "description": "hello\r world",
   "main": "app.js",
   "scripts": {
-    "test": "npm start"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/rvp39/INP-project/issues"
   },
-  "homepage": "https://github.com/rvp39/INP-project#readme"
+  "homepage": "https://github.com/rvp39/INP-project#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "gsap": "^3.5.1",
+    "mongoose": "^5.10.15",
+    "nodemon": "^2.0.6"
+  }
 }
