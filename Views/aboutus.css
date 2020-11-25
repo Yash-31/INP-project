@@ -47,6 +47,7 @@ body{
     min-height: 100vh;
     background: url("./images/annie-spratt-KcpQKqYmvGE-unsplash.jpg");
     background-size: cover;
+    background-attachment: fixed;
     padding: 0rem 5rem;
 }   
 .main{
@@ -70,6 +71,10 @@ body{
 .main > h1{
     padding-left: 50%;
 }
+.main > h2{
+    padding-left: 10%;
+}
 .main > p{
-
+    text-align: left;
+    padding-left: 10%;
 }
