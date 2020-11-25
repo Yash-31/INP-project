@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=EB+Garamond:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+:root{
+    font-size: 20px;
+    --text-color-primary:#deecff;
+    --text-color-hover: #aed0ff;
+    --background-color : #202060;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    
+    font-size: 1.5rem;
+    min-height: 15vh;
+    align-items: center;
+    
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+body{
+    color: var(--text-color-primary);
+}
+.nav-links{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    
+
+    
+}
+.nav-links li{
+    align-items: center;
+    padding: 0rem 1.5rem;
+    transition: .2s;
+    }
+.nav-links li:hover{
+    color: var(--text-color-hover);
+    border-bottom: 2px solid var(--text-color-hover);
+}

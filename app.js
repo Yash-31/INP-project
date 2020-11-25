@@ -25,7 +25,7 @@ app.get("/contact",function(req,res){
 });
 
 app.get("/home",function(req,res){
-    res.render("home");
+    res.render("Home");
 });
 
 
