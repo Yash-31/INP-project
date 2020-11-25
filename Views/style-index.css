@@ -25,6 +25,7 @@ main{
     background: url("./images/annie-spratt-KcpQKqYmvGE-unsplash.jpg");
     background-size: cover;
     padding: 0rem 5rem;
+    background-attachment: fixed;
 }
 nav{
     display: flex;
