@@ -43,3 +43,9 @@ body{
     color: var(--text-color-hover);
     border-bottom: 2px solid var(--text-color-hover);
 }
+main{
+    background: url("./images/annie-spratt-KcpQKqYmvGE-unsplash.jpg");
+    min-height: 100vh;
+    background-size: cover;
+    padding: 0rem 5rem;
+}
