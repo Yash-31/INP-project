@@ -16,7 +16,7 @@ a{
     box-sizing: border-box;
 }
 main{
-    font-family: 'Dancing Script',cursive;
+    
     color: var(--text-color-primary);
 }
 
@@ -25,21 +25,17 @@ main{
     background: url("./images/annie-spratt-KcpQKqYmvGE-unsplash.jpg");
     background-size: cover;
     padding: 0rem 5rem;
-    background-attachment: fixed;
 }
 nav{
     display: flex;
-    
+    justify-content: space-between;
     font-size: 1.5rem;
     min-height: 15vh;
     align-items: center;
-    
 }
 .nav-links{
     display: flex;
     list-style: none;
-    width: 100%;
-
     
 }
 .nav-links li{
@@ -61,7 +57,7 @@ nav{
 
     margin-top: 6rem;
     margin-left: 10rem;
-    width: 70%;
+    width: max-content;
     padding-right:10rem ;
     
     height: max-content;
@@ -135,3 +131,23 @@ nav{
     transform: translateY(100%);
 }
  
+.banner{
+    min-width: 100vh;
+    min-height: 10rem;
+    background-color:#223a3b4f ;
+    padding: 2rem;
+}
+.banner-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: max-content;
+    
+}
+.banner-content h1{
+    font-size: 3rem;
+    padding-bottom: 0.5rem;
+}
+.banner-content p{
+    padding: 1rem;
+}

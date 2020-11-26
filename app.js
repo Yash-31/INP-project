@@ -23,13 +23,13 @@ app.get("/contact",function(req,res){
 
     res.render("ContactUs");
 });
-
 app.get("/home",function(req,res){
     res.render("Home");
 });
 
-
-
+app.get("/signup",function(req,res){
+    res.render("signup");
+});
 
 
 

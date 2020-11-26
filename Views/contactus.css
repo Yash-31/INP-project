@@ -6,48 +6,6 @@
     --text-color-hover: #aed0ff;
     --background-color : #202060;
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    color: var(--text-color-primary);
-}
-a{
-    text-decoration: none;
-    color: inherit;
-}
-nav{
-    display: flex;
-    
-    font-size: 1.5rem;
-    min-height: 15vh;
-    align-items: center;
-    
-}
-.nav-links{
-    display: flex;
-    list-style: none;
-    width: 100%;
-
-    
-}
-.nav-links li{
-    align-items: center;
-    padding: 0rem 1.5rem;
-    transition: .2s;
-    }
-.nav-links li:hover{
-    color: var(--text-color-hover);
-    border-bottom: 2px solid var(--text-color-hover);
-}
-.landing{
-    min-height: 100vh;
-    background: url("./images/annie-spratt-KcpQKqYmvGE-unsplash.jpg");
-    background-size: cover;
-    padding: 0rem 5rem;
-}
 .main{
     position: absolute;
     font-family: 'Roboto Slab', serif;

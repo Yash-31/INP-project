@@ -6,50 +6,7 @@
     --text-color-hover: #aed0ff;
     --background-color : #202060;
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-nav{
-    display: flex;
-    
-    font-size: 1.5rem;
-    min-height: 15vh;
-    align-items: center;
-    
-}
-a{
-    text-decoration: none;
-    color: inherit;
-}
-body{
-    color: var(--text-color-primary);
-}
-.nav-links{
-    display: flex;
-    list-style: none;
-    width: 100%;
-    
 
-    
-}
-.nav-links li{
-    align-items: center;
-    padding: 0rem 1.5rem;
-    transition: .2s;
-    }
-.nav-links li:hover{
-    color: var(--text-color-hover);
-    border-bottom: 2px solid var(--text-color-hover);
-}
-.landing{
-    min-height: 100vh;
-    background: url("./images/annie-spratt-KcpQKqYmvGE-unsplash.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    padding: 0rem 5rem;
-}   
 .main{
     position: absolute;
     font-family: 'Roboto Slab', serif;
@@ -58,7 +15,7 @@ body{
 
     background-color:#223a3b4f ;
 
-    margin-top: 6rem;
+    margin-top: 3rem;
     margin-left: 10rem;
     width: 70%;
     padding-right:10rem ;
