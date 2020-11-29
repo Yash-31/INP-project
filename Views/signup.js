@@ -1,5 +1,5 @@
 const form = document.getElementById('form');
-const name = document.getElementById('inputUserame');
+const name = document.getElementById('inputUsername');
 const email = document.getElementById('inputEmail');
 const password = document.getElementById('inputPassword');
 const cpassword = document.getElementById('inputConfirmPassword');
@@ -19,10 +19,10 @@ const sendData=(nameVal,sRate,count)=>{
 
 //After All Success data entries
 const successMsg=(nameVal)=>{
-    let formCon=document.getElementsByClassName('form-label-group');
+    let formCon=document.getElementsByClassName('form-control');
     var count=formCon.length-1;
     for(var i=0;i<formCon.length;i++){
-    if(formCon[i].className==="form-label-group"){
+    if(formCon[i].className==="form-control success"){
     var sRate=0+i;
     sendData(nameVal,sRate,count);
     }else{
@@ -52,36 +52,36 @@ const validate=()=>{
     
     //validating name
 if(nameVal===""){
-    setErrorMsg(name,'Name cannot be blank');
+    setErrorMsg('Name cannot be blank');
     }else if(nameVal.length<=2){
-    setErrorMsg(name,'Name should contain at least 3 characters');
+    setErrorMsg('Name should contain at least 3 characters');
     }else{
     setSuccessMsg(name);
     }
 
     //validating email
 if(emailVal===""){
-    setErrorMsg(email,'Email cannot be blank');
+    setErrorMsg('Email cannot be blank');
     }else if(!isEmail(emailVal)){
-    setErrorMsg(email,'Not a valid email');
+    setErrorMsg('Not a valid email');
     }else{
     setSuccessMsg(email);
     }
 
     //validating password
 if(passwordVal===""){
-    setErrorMsg(password,'Password cannot be blank');
+    setErrorMsg('Password cannot be blank');
     }else if(passwordVal.length<=5){
-    setErrorMsg(password,'Should contain minimum 6 characters');
+    setErrorMsg('Should contain minimum 6 characters');
     }else{
     setSuccessMsg(password);
     }
 
     //validating cpassword
     if(cpasswordVal===""){
-    setErrorMsg(cpassword,'Confirm Password cannot be blank');
+    setErrorMsg('Confirm Password cannot be blank');
     }else if(passwordVal!=cpasswordVal){
-    setErrorMsg(cpassword,'Password does not match');
+    setErrorMsg('Password does not match');
     }else{
     setSuccessMsg(cpassword);
     }
@@ -91,11 +91,11 @@ if(passwordVal===""){
 function setErrorMsg(input, errormsgs){
     const formControl=input.parentElement;
     const small=formControl.querySelector('small');
-    formControl.className="form-label-group error";
+    formControl.className="form-control error";
     small.innerText=errormsgs;
 }
 
 function setSuccessMsg(input){
     const formControl=input.parentElement;
-    formControl.className="form-label-group success";
+    formControl.className="form-control success";
 }
