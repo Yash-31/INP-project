@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="genral.css">
     <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous"/>
     <title>Document</title>
 </head>
 <body>
@@ -29,15 +30,17 @@
               <h5 class="card-title text-center">Register</h5>
 
 
-              <form class="form-signin">
+              <form class="form-signin" id="form" method="POST">
                 <div class="form-label-group">
-                  <input type="text" id="inputUserame" class="form-control" placeholder="Username" required autofocus>
-                  <label for="inputUserame">Username</label>
+                  <input type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+                  <label for="inputUsername">Username</label><br>
+                  <small>ErrorMessage</small>
                 </div>
   
                 <div class="form-label-group">
                   <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
                   <label for="inputEmail">Email address</label>
+                  <small>ErrorMessage</small>
                 </div>
                 
                 <hr>
@@ -45,11 +48,13 @@
                 <div class="form-label-group">
                   <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
                   <label for="inputPassword">Password</label>
+                  <small>ErrorMessage</small>
                 </div>
                 
                 <div class="form-label-group">
                   <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Password" required>
                   <label for="inputConfirmPassword">Confirm password</label>
+                  <small>ErrorMessage</small>
                 </div>
   
                 <div class="buttons">
@@ -65,5 +70,7 @@
         </div>
       </div>
     </div>
+  <script src="signup.js"> </script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </body>
 </html>

@@ -111,3 +111,17 @@
  .buttons{
      padding-left: 2rem;
  }
+ .form-control.success input{
+   border-color: #008000;
+ }
+ .form-control.error input{
+  border-color: #e74c3c;
+}
+.form-control small{
+  color: #e74c3c;
+  position: absolute;
+  visibility: hidden;
+}
+.form-control.error small{
+  visibility: visible;
+}
