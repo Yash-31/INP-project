@@ -11,7 +11,7 @@
     box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
     overflow: hidden;
     max-width: 50vh;
-    margin-left: 100vh;
+    margin-left: 60vh;
     background-color:#223a3b4f ;
   }
   
@@ -124,4 +124,8 @@
 }
 .form-label-group.error small{
   visibility: visible;
+}
+.si{
+  margin-left: 3rem;
+  padding-left: 3rem;
 }
