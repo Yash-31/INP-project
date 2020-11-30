@@ -17,6 +17,7 @@
             <a href="/about"><li>About Us</li></a>
             <a href="/contact"><li>Contact Us</li></a>
             <a href="/signup"><li>Register</li></a>
+            <a href="#" onclick="toggle_visibility('in-form')"><li>Login</li></a>
         </ul>
     </nav>
     </div>
@@ -28,6 +29,25 @@
         <a href="/about"><li>About Us</li></a>
                 <a href="/contact"><li>Contact Us</li></a>
       </footer>
+      <div class="inline-form" id="in-form">
+          <div>
+              <div>
+          <form class="inline-login" id="form">
+              <div class="form-label-group">
+                  <input type="text" id="Usename" class="form-control" placeholder="Username" required autofocus>
+                  <label for="Username">Username</label>
+              </div>
 
+              <div class="form-label-group">
+                <input type="password" id="Password" class="form-control" placeholder="Password" required>
+                <label for="Password">Password</label>
+              </div>
+
+              <div class="buttons">
+                <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Login</button>
+
+          </form></div></div>
+      </div>
+      <script src="Home.js"></script>
 </body>
 </html>
