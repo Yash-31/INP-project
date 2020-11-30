@@ -111,17 +111,17 @@
  .buttons{
      padding-left: 2rem;
  }
- .form-control.success input{
+ .form-label-group.success input{
    border-color: #008000;
  }
- .form-control.error input{
+ .form-label-group input{
   border-color: #e74c3c;
 }
-.form-control small{
+.form-label-group small{
   color: #e74c3c;
   position: absolute;
   visibility: hidden;
 }
-.form-control.error small{
+.form-label-group.error small{
   visibility: visible;
 }
