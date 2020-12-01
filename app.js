@@ -1,14 +1,19 @@
 var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
+var mongoose = require('mongoose');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("Views"))
 app.set("view engine","ejs")
 
+var User = require('./models/user');
 
 
-
+mongoose.connect('mongodb://localhost:27017/authDemo', {useNewUrlParser: true, useUnifiedTopology: true})
+.then(()=>{
+    console.log('connected')
+})
 
 
 app.get("/",function(req,res){
@@ -27,11 +32,19 @@ app.get("/home",function(req,res){
     res.render("Home");
 });
 
+
+//sugnup and stuff
 app.get("/signup",function(req,res){
     res.render("signup");
 });
+app.post('/signup',function(req,res){
+    res.send (req.body)
+})
 
 
+app.get("/profile",(req,res)=>{
+    res.send ('hols');
+})
 
 
 
