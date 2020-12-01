@@ -2,7 +2,7 @@ var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
 var mongoose = require('mongoose');
-
+var bcrypt = require('bcrypt');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("Views"))
 app.set("view engine","ejs")
@@ -37,13 +37,15 @@ app.get("/home",function(req,res){
 app.get("/signup",function(req,res){
     res.render("signup");
 });
-app.post('/signup',function(req,res){
-    res.send (req.body)
+app.post('/signup',async (req,res)=>{
+    const {Username,Password}=req.body;
+    const hash = await bcrypt.hash(Password,12)
+    res.send(hash)
 })
 
 
 app.get("/profile",(req,res)=>{
-    res.send ('hols');
+    res.send ('profile');
 })
 
 
