@@ -2,48 +2,32 @@
     --input-padding-x: 1.5rem;
     --input-padding-y: .75rem;
   }
+
   
-  
-  
-  .card-signin {
-    border: 0;
-    border-radius: 1rem;
-    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    max-width: 50vh;
-    margin-left: 60vh;
-    background-color:#223a3b4f ;
+   .inline-login{
+      padding-right: .5rem;
   }
-  
-  .card-signin .card-title {
-    margin-bottom: 2rem;
-    font-weight: 300;
-    font-size: 1.5rem;
-    padding-left: 5rem;
+  .inline-login, .form-label-group, .buttons{
+      display: inline-block;
   }
-  
-  .card-signin .card-img-left {
-    width: 45%;
-   
+  .inline-form{
+      position: relative;
+      float: right;
+      z-index: 1;
+      visibility: hidden;
+      background-color: rgba(255, 255, 255, .1);
+      border-radius: .5rem;
+      padding: 1rem 1rem .6rem 1rem;
   }
-  
-  .card-signin .card-body {
-    padding: 2rem;
-  }
-  
-  .form-signin {
-    width: 100%;
-  }
-  
-  .form-signin .btn {
-    font-size: 80%;
-    border-radius: 5rem;
+  .inline-login .btn {
+    font-size: 70%;
+    border-radius: 2.5rem;
     letter-spacing: .1rem;
     font-weight: bold;
     padding: 1rem;
+    height: auto;
     transition: all 0.2s;
   }
-  
   .form-label-group {
     position: relative;
     margin-bottom: 1rem;
@@ -53,12 +37,10 @@
     height: auto;
     border-radius: 2rem;
   }
-  
   .form-label-group>input,
   .form-label-group>label {
     padding: var(--input-padding-y) var(--input-padding-x);
   }
-  
   .form-label-group>label {
     position: absolute;
     top: 0;
@@ -93,7 +75,6 @@
   .form-label-group input::placeholder {
     color: transparent;
   }
-  
   .form-label-group input:not(:placeholder-shown) {
     padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
     padding-bottom: calc(var(--input-padding-y) / 3);
@@ -105,27 +86,3 @@
     font-size: 12px;
     color: #777;
   }
-  hr{
-      margin: 1rem 0;
-  }
- .buttons{
-     padding-left: 2rem;
- }
- .form-label-group.success input{
-   border-color: #008000;
- }
- .form-label-group input{
-  border-color: #e74c3c;
-}
-.form-label-group small{
-  color: #e74c3c;
-  position: absolute;
-  visibility: hidden;
-}
-.form-label-group.error small{
-  visibility: visible;
-}
-.si{
-  margin-left: 2rem;
-  
-}
