@@ -7,13 +7,21 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("Views"))
 app.set("view engine","ejs")
 
-var User = require('./models/user');
+//mongoose connection
 
 
-mongoose.connect('mongodb://localhost:27017/authDemo', {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect('mongodb://localhost:27017/authDemoa', {useNewUrlParser: true, useUnifiedTopology: true})
 .then(()=>{
     console.log('connected')
 })
+
+//mschemas 
+const userSchema = new mongoose.Schema({
+    Username: String,
+    Password: String 
+    });
+
+const User = mongoose.model("User",userSchema);
 
 
 app.get("/",function(req,res){
@@ -37,12 +45,33 @@ app.get("/home",function(req,res){
 app.get("/signup",function(req,res){
     res.render("signup");
 });
-app.post('/signup',async (req,res)=>{
+app.post('/signup',(req,res)=>{
     const {Username,Password}=req.body;
-    const hash = await bcrypt.hash(Password,12)
-    res.send(hash)
+    // console.log(Username);
+    // console.log(Password)
+    
+    const user = new User({Username,Password});
+    //console.log(user);
+    user.save();
+    res.redirect('/home')
 })
 
+app.get('/login', (req,res)=>{
+    res.render();
+    
+    //res.send(user.Password);
+    
+    
+})
+app.post('/login', (req,res)=>{
+    const {Username , Password}=req.body;
+    console.log(Username);
+    console.log(Password)
+    
+    //res.send(user.Password);
+    
+    
+})
 
 app.get("/profile",(req,res)=>{
     res.send ('profile');
