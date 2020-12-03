@@ -2,14 +2,28 @@
   font-size: 20px;
   --text-color-primary:#deecff;
   --text-color-hover: #aed0ff;
-  --background-color : #202060;
+  --background-color :  #224446;
 }
 .container{
-  height: 100vh;
+  height:max-content
   width: 100%;;
   /* background-color:white; */
   padding-top: 0.5rem;
+  margin-bottom:0.5rem;
+  box-shadow: 0 0 1rem black ;
+ 
   }
+.login input{
+  margin: 1rem;
+  padding: 0.2rem;
+
+}
+.login{
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: black;
+  box-shadow: inset 0 0 0.5rem #272626 , 0 0 0.5rem black ;
+}
 
 .encyc{
   height: 40vh;
@@ -17,15 +31,38 @@
   display: flex;
   /* background-color: black; */
 }  
+.neut{
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  /* background-color: black; */
+}
 .text{
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.5rem;
+  color: var(--text-color-primary);
   height: 100%;
   width: 50%;
   background-color: #224446 ;
-  
+  padding: 4rem  1rem;
 }
 .no-img{
   height: 100%;
   width: 50%;
   background:none;
   background-color:#223a3b4f ;
+}
+.more{
+  font-size: 2rem;
+  height: max-content;
+  width: max-content;
+  padding: 0.4rem 0.2rem ;
+  background-color: #224446;
+  margin: 5rem 10rem;
+}
+.more:hover{
+  background-color: var(--text-color-primary);
+  color: var(--background-color);
+  box-shadow: 0 0 1rem var(--text-color-primary);
+
 }
