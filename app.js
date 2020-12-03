@@ -56,13 +56,15 @@ app.post('/signup',(req,res)=>{
     res.redirect('/home')
 })
 
-
+app.get('/profile', (req,res)=>{
+    res.render('Profile');
+})
 app.post('/login', (req,res)=>{
-    const {Username , Password}=req.body;
-    console.log(Username);
-    console.log(Password)
+    const {username , password}=req.body;
+    const user = User.findOne({username});
+   // console.log(user);
+    // console.log(user.Password);
     
-    //res.send(user.Password);
     
     
 })
