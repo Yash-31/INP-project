@@ -56,13 +56,7 @@ app.post('/signup',(req,res)=>{
     res.redirect('/home')
 })
 
-app.get('/login', (req,res)=>{
-    res.render();
-    
-    //res.send(user.Password);
-    
-    
-})
+
 app.post('/login', (req,res)=>{
     const {Username , Password}=req.body;
     console.log(Username);
