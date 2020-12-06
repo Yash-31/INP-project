@@ -10,9 +10,11 @@ app.set("view engine","ejs")
 //mongoose connection
 
 
-mongoose.connect('mongodb://localhost:27017/authDemoa', {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect('mongodb://localhost:27017/Demo', {useNewUrlParser: true, useUnifiedTopology: true})
 .then(()=>{
     console.log('connected')
+}).catch(err=>{
+    console.log(err)
 })
 
 //mschemas 
@@ -22,6 +24,16 @@ const userSchema = new mongoose.Schema({
     });
 
 const User = mongoose.model("User",userSchema);
+const soilType = new mongoose.Schema({
+    Name:        String,
+    Nutrients:   String,
+    Description: String,
+    image:       String,
+    map:         String 
+    });
+
+const soil = mongoose.model("soil",soilType);
+
 
 
 app.get("/",function(req,res){
@@ -36,12 +48,27 @@ app.get("/contact",function(req,res){
 
     res.render("ContactUs");
 });
+
+//home and it children
 app.get("/home",function(req,res){
     res.render("Home");
 });
+app.get("/soiltype",async(req,res)=>{
+    const soils = await soil.find({});
+    res.render('soilType',{soils})
+})
+app.get("/soiltype/:id", async(req,res)=>{
+    const soils = await soil.findById(req.params.id)
+    res.render('soilTypess',{soils});
+
+})
 
 
-//sugnup and stuff
+app.get("/nutrient",(req,res)=>{
+    res.render('nutrient')
+})
+
+//signup and stuff
 app.get("/signup",function(req,res){
     res.render("signup");
 });

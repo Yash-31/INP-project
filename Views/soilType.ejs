@@ -21,14 +21,38 @@
         </ul>
     </nav>
     </div>
-    <div>
-        <div id="below-nav" class="container">
-            <p>TEST</p>
+    <div class="container">
+        <h1 id="tittle">Types of soil present in India</h1>
+        <div class="buttons">
+            
+          
+              <% soils.forEach((soils)=>{%>
+                <a href="/soiltype/<%= soils._id%>">
+                    <div class="card">
+                        <div class="image">
+                            <img src="<%=soils.image%>" alt="">
+                        </div>
+                        <div class="text">
+                          <%= soils.Name%>
+                          
+                          
+                        </div>
+                      </div>
+                </a>
+                
+                
+                <% });%>
+            
         </div>
-        <div class="content-div">
-        <p>TEST</p>
-        </div>
+       
     </div>
+    </div>
+
+
+
+
+
+
     <footer id="footer">
         <h1>AgroCares</h1>
         <a href="/about"><li>About Us</li></a>

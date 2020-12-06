@@ -1,17 +1,62 @@
-#below-nav{
-    height:50vh;
+.buttons{
+    
+    height:max-content;
     width: 100%;
     /* background-color:white; */
-    padding-top: 0.5rem;
+    
     margin-bottom:1.1rem;
     box-shadow: 0 0 1rem black ;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 3rem;
    
     }
-.content-div{
-    height: max-content;
-    width: 100%;
-    padding-top: 0.5rem;
-    padding-bottom: .5rem;
-    margin-bottom:0.5rem;
-    box-shadow: 0 0 1rem black ;
+
+ul{
+    list-style: none;
+    display: flex;
 }
+
+
+.card{
+    border: none;
+    border-radius:1rem;
+    height : 20rem;
+    width  : 15rem;
+    margin: 1rem 0.2rem;
+    overflow:hidden;
+    
+  }
+  .card:hover{
+      transform: scale(1.1);
+      box-shadow: 0 0 1rem var(--text-color-primary);
+      transition: 0.2s ease-in-out;
+
+
+  }
+  .image{
+    overflow: hidden;
+    height:80%;
+    width: 100%;
+    align-items: center;
+    
+  }
+  img{
+    height:100%;
+    width: 100%;
+    
+  }
+  #tittle{
+      padding-left: 50vh;
+      margin: 1rem 0;
+  }
+  .text{
+    color:var(--text-color-primary);
+    height:100%;
+    width: 100%;
+    box-shadow: 0 0 10rem white;
+    font-size: 1.3rem;
+    background-color:#224446;
+    align-self:center;
+    padding: 0.5rem 3rem;
+  }

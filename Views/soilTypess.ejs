@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=EB+Garamond:ital@1&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+        :root{
+            font-size: 20px;
+            --text-color-primary:#deecff;
+            --text-color-hover: #aed0ff;
+            --background-color :  #224446;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* width */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+        
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+        
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        body{
+            color: var(--text-color-primary);
+            background: url("./images/annie-spratt-KcpQKqYmvGE-unsplash.jpg");
+            background-attachment: fixed;
+            background-size: cover; 
+            background-attachment: fixed;
+            position: relative;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.5rem;
+            min-height: 15vh;
+            align-items: center;
+        }
+        .nav-links{
+            display: flex;
+            list-style: none;
+            
+        }
+        .nav-links li{
+            align-items: center;
+            padding: 0rem 1.5rem;
+            transition: .2s;
+            }
+        .nav-links li:hover{
+            color: var(--text-color-hover);
+            border-bottom: 2px solid var(--text-color-hover);
+        }
+        #footer{
+        
+
+            width: 100%;
+            height: 5rem;
+            padding-left: 5rem;
+            padding-top: .5rem;
+            background-color: #000000;
+            font-size: .8rem;
+        }
+        
+        .card{
+            position: absolute;
+            top: 50;
+            left: 50;
+            border: none;
+            border-radius:1rem;
+            height : 100vh;
+            width  : 200vh;            
+            overflow:hidden;
+            display:flex;
+            
+        }
+        .image{
+            overflow: hidden;
+            height:100%;
+            width: 40%;
+            align-items: center;
+        
+        }
+        img{
+            height:100%;
+            width: auto;
+        
+        }
+        .text{
+            color:var(--text-color-primary);
+            height:100%;
+            width: 100%;
+            box-shadow: 0 0 10rem black;
+            z-index:1;
+            background-color:#224446;
+            align-self:center;
+            padding: 2rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .tittle{
+            display:flex;
+        }
+        .tittle h1{
+            padding-left:30vh;
+        }
+        .cover{
+            height: 100vh;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #000000de;
+            z-index: -5;
+            }
+    </style>
+</head>
+<body>
+    <div class="cover"></div>
+    <div class="card">
+        <div class="text">
+          <div class="tittle">
+            <a href="/soiltype">back</a>
+            <h1> <%= soils.Name%> </h1>  
+           </div>
+          <p>
+            Description:
+            <br>
+            <%=soils.Description%>
+          </p>
+          <p>
+            Nutrients:
+            <br> 
+            <%=soils.Nutrients%>
+          </p>
+               
+             </div>
+             <div class="image">
+                 <img src="<%=soils.image%>" alt="">
+             </div>
+             
+           </div></body>
+</html>
