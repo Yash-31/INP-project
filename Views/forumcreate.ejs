@@ -3,9 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="genral.css">
     <title>Document</title>
+    <style>
+        form{
+            display: flex;
+            flex-direction: column;
+
+        }
+        form input{
+            width: 20rem;
+        }
+        .card{
+            margin: 5vh 50vh;
+            padding: 2rem 3rem;
+            height: max-content;
+            width: 70vh;
+            background-color:#223a3b4f ;
+            box-shadow: 0 0 3rem black;
+            border: none;
+            border-radius: 2rem;
+        }
+        button{
+            width: 5rem;
+            height: 2rem;
+            font-size: 1.2rem;
+        }
+        .buttons{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
 <body>
     <div>
@@ -21,7 +50,25 @@
         </ul>
     </nav>
     
+    <div class="card">
+        <form action="/forumcreate" method="post">
+            <h1>Create a new post</h1>
+            <label for="tittle">Post Tittle</label>
+            <input type="text" name="tittle" id="">
+            <label for="author">Author</label>
+            <input type="text" name="author" id="">
+            <label for="date">Date</label>
+            <input type="datetime-local" name="date" id="">
+            <label for="content">Post content</label>
+            <textarea name="content" id="" cols="30" rows="10"></textarea>
 
+            <div class="buttons">
+                <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+            </div>
+
+        </form>
+    </div>
 
 
 
@@ -45,12 +92,6 @@
 
 
     </div>
-    <footer id="footer">
-        <h1>AgroCares</h1>
-        <a href="/about"><li>About Us</li></a>
-        <a href="/contact"><li>Contact Us</li></a>
-      </footer>
-      
-      <script src="Home.js"></script>
+    
 </body>
 </html>

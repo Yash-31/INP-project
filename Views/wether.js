@@ -1,0 +1,1 @@
+axios.get('api.openweathermap.org/data/2.5/forecast/daily?zip=94040,us&appid=81dde2d6c50bc758cdfb9b34282da33a')

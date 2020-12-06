@@ -36,6 +36,8 @@ const soil = mongoose.model("soil",soilType);
 
 
 
+
+
 app.get("/",function(req,res){
 
     res.render("index");
@@ -64,8 +66,8 @@ app.get("/soiltype/:id", async(req,res)=>{
 })
 
 
-app.get("/nutrient",(req,res)=>{
-    res.render('nutrient')
+app.get("/weather",(req,res)=>{
+    res.render('wether')
 })
 
 //signup and stuff
@@ -91,10 +93,46 @@ app.post('/login', (req,res)=>{
     const user = User.findOne({username});
    // console.log(user);
     // console.log(user.Password);
-    
-    
-    
 })
+
+
+//forum part and its settings
+
+const postSchema = new mongoose.Schema({
+    tittle: String,
+    author:String,
+    date:String,
+    content:String
+
+});
+const Post = mongoose.model('Post',postSchema);
+app.get('/forumindex',(req,res)=>{
+    res.render('forumindex');
+})
+app.get('/forumcreate',(req,res)=>{
+    res.render('forumcreate');
+})
+app.post('/forumcreate',(req,res)=>{
+    const post = new Post(req.body);
+    post.save(()=>{
+        
+        
+            console.log("saved successfully");
+        
+    })
+})
+
+
+
+
+
+
+
+
+
+
+
+
 
 app.get("/profile",(req,res)=>{
     res.send ('profile');
