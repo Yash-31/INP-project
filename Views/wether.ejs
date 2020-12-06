@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="genral.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
  
-    <title>Document</title>
+    <title>Weather</title>
+    <style>
+
+        </style>
 </head>
 <body>
     <div>
@@ -18,7 +21,7 @@
             
             <a href="/about"><li>About Us</li></a>
             <a href="/contact"><li>Contact Us</li></a>
-            <a href="/signup"><li>Register</li></a>
+            <!-- <a href="/signup"><li>Register</li></a> -->
             
         </ul>
        
@@ -26,10 +29,402 @@
     <main>
         <h1>Forcast</h1>
         <div class="city">
-            city
+            <div class="dropdown">
+                <span id="city">City</span>
+                <div class="dropdown-content">
+                <ul style="list-style: none;">
+                    <li id='mum' onclick="setTimeout(displayMum(), 3000)">Mumbai</li>
+                    <li id='rpr' onclick="setTimeout(displayRpr(), 3000)">Raipur</li>
+                    <li id='sur' onclick="setTimeout(displaySur(), 3000)">Surat</li>
+                </ul>
+                </div>
+              </div>
         </div>
         <div class="data">
-            data
+            <div id="mumbai" class="weather">
+                Mumbai
+               <table>
+                   <tr>
+                       <td> 
+                           Date
+                       </td>
+                       <td>
+                           Maximum Temp
+                       </td>
+                       <td>
+                            Minimum Temp
+                       </td>
+                       <td>
+                           Wind speed
+                       </td>
+                       <td>
+                           Rain %
+                       </td>
+                       <td>
+                           Relative humidity
+                       </td>
+                   </tr>
+ 
+                   <tr>
+                        <td> 
+                            08-12-2020                            
+                        </td>
+                        <td>
+                            31
+                        </td>
+                        <td>
+                            26
+                        </td>
+                        <td>
+                            7
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            46
+                        </td>
+                   </tr>
+                   <tr>
+                        <td> 
+                            09-12-2020                            
+                        </td>
+                        <td>
+                            31
+                        </td>
+                        <td>
+                            26
+                        </td>
+                        <td>
+                            7
+                        </td>
+                        <td>
+                            0
+                        </td>
+                    <td>
+                        48
+
+                    </td>
+               </tr>
+               <tr>
+                    <td> 
+                        10-12-2020                            
+                    </td>
+                    <td>
+                        31
+                    </td>
+                    <td>
+                        26
+                    </td>
+                    <td>
+                        7
+                    </td>
+                    <td>
+                        0
+                    </td>
+                   <td>
+                       50
+                   </td>
+               </tr>
+               <tr>
+                    <td> 
+                        11-12-2020                            
+                    </td>
+                    <td>
+                        31
+                    </td>
+                    <td>
+                        26
+                    </td>
+                    <td>
+                        6
+                    </td>
+                    <td>
+                        0
+                    </td>
+                <td>48
+                    
+                </td>
+           </tr>
+           <tr>
+                <td> 
+                    12-12-2020                            
+                </td>
+                <td>
+                    26
+                </td>
+                <td>
+                   25
+                </td>
+                <td>
+                    1
+                </td>
+                <td>
+                    0
+                </td>
+                <td>
+                    66
+                    
+                </td>
+            </tr>
+               </table>
+            </div>
+            <div id="raipur" class="weather">
+                Raipur
+                <table>
+                    <tr>
+                        <td> 
+                            Date
+                        </td>
+                        <td>
+                            Maximum Temp
+                        </td>
+                        <td>
+                             Minimum Temp
+                        </td>
+                        <td>
+                            Wind speed
+                        </td>
+                        <td>
+                            Rain %
+                        </td>
+                        <td>
+                            Relative humidity
+                        </td>
+                    </tr>
+  
+                    <tr>
+                         <td> 
+                             08-12-2020                            
+                         </td>
+                         <td>
+                             19
+                         </td>
+                         <td>
+                             12
+                         </td>
+                         <td>
+                             3
+                         </td>
+                         <td>
+                             0
+                         </td>
+                         <td>
+                             47
+                         </td>
+                    </tr>
+                    <tr>
+                        <td> 
+                            09-12-2020                            
+                        </td>
+                        <td>
+                            20
+                        </td>
+                        <td>
+                            15
+                        </td>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            40
+    
+                        </td>
+                </tr>
+                <tr>
+                     <td> 
+                         10-12-2020                            
+                     </td>
+                     <td>
+                         23
+                     </td>
+                     <td>
+                         18
+                     </td>
+                     <td>
+                         1
+                     </td>
+                     <td>
+                         0
+                     </td>
+                    <td>
+                        29
+                    </td>
+                </tr>
+                <tr>
+                     <td> 
+                         11-12-2020                            
+                     </td>
+                     <td>
+                        22 
+                     </td>
+                     <td>
+                         16
+                     </td>
+                     <td>
+                         6
+                     </td>
+                     <td>
+                         0
+                     </td>
+                 <td>
+                     37
+                 </td>
+            </tr>
+            <tr>
+             <td> 
+                 12-12-2020                            
+             </td>
+             <td>
+                 21
+             </td>
+             <td>
+                 19
+             </td>
+             <td>
+                 2
+             </td>
+             <td>
+                 0
+             </td>
+            <td>
+                27
+                
+            </td>
+        </tr>
+                </table>
+            </div>
+            <div id="surat" class="weather">
+                Surat
+                <table>
+                    <tr>
+                        <td> 
+                            Date
+                        </td>
+                        <td>
+                            Maximum Temp
+                        </td>
+                        <td>
+                             Minimum Temp
+                        </td>
+                        <td>
+                            Wind speed
+                        </td>
+                        <td>
+                            Rain %
+                        </td>
+                        <td>
+                            Relative humidity
+                        </td>
+                    </tr>
+  
+                    <tr>
+                         <td> 
+                             08-12-2020                            
+                         </td>
+                         <td>
+                             33
+                         </td>
+                         <td>
+                             24
+                         </td>
+                         <td>
+                             5
+                         </td>
+                         <td>
+                             0
+                         </td>
+                         <td>
+                             31
+                         </td>
+                    </tr>
+                    <tr>
+                     <td> 
+                         09-12-2020                            
+                     </td>
+                     <td>
+                         33
+                     </td>
+                     <td>
+                         24
+                     </td>
+                     <td>
+                         6
+                     </td>
+                     <td>
+                         0
+                     </td>
+                    <td>
+                        36
+ 
+                    </td>
+                </tr>
+                <tr>
+                     <td> 
+                         10-12-2020                            
+                     </td>
+                     <td>
+                         33
+                     </td>
+                     <td>
+                         22
+                     </td>
+                     <td>
+                         4
+                     </td>
+                     <td>
+                         0
+                     </td>
+                    <td>
+                        47
+                    </td>
+                </tr>
+                <tr>
+                     <td> 
+                         11-12-2020                            
+                     </td>
+                     <td>
+                         31
+                     </td>
+                     <td>
+                         23
+                     </td>
+                     <td>
+                         5
+                     </td>
+                     <td>
+                         25
+                     </td>
+                 <td>54
+                     
+                 </td>
+            </tr>
+            <tr>
+             <td> 
+                 12-12-2020                            
+             </td>
+             <td>
+                 30
+             </td>
+             <td>
+                 26
+             </td>
+             <td>
+                 7
+             </td>
+             <td>
+                 25
+             </td>
+            <td>
+                66
+                
+            </td>
+        </tr>
+                </table>
+            </div>
         </div>
     </main>
 
@@ -57,8 +452,8 @@
 
     </div>
     
-      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
 
-      <script src="wether.js"></script>
+      <script src="wether.js"></script> 
 </body>
 </html>

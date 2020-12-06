@@ -106,22 +106,25 @@ const postSchema = new mongoose.Schema({
 
 });
 const Post = mongoose.model('Post',postSchema);
-app.get('/forumindex',(req,res)=>{
-    res.render('forumindex');
+app.get('/forumindex',async(req,res)=>{
+    const posts = await Post.find({});
+    res.render('forumindex',{posts});
 })
 app.get('/forumcreate',(req,res)=>{
     res.render('forumcreate');
 })
 app.post('/forumcreate',(req,res)=>{
     const post = new Post(req.body);
-    post.save(()=>{
-        
-        
+    post.save(()=>{            
             console.log("saved successfully");
-        
+            res.redirect('/forumindex')
     })
 })
+app.get("/forumshow/:id", async(req,res)=>{
+    const posts = await Post.findById(req.params.id)
+    res.render('forumshow',{posts});
 
+})
 
 
 

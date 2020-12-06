@@ -1,1 +1,27 @@
-axios.get('api.openweathermap.org/data/2.5/forecast/daily?zip=94040,us&appid=81dde2d6c50bc758cdfb9b34282da33a')
+
+function displayMum() {
+    document.getElementById('city').innerHtml="Mumbai";
+    document.getElementById('mumbai').classList.add('disp');
+    document.getElementById('raipur').classList.remove('disp');
+    document.getElementById('surat').classList.remove('disp');
+    
+}
+
+function displayRpr() {
+
+    document.getElementById('raipur').classList.add('disp');
+    document.getElementById('mumbai').classList.remove('disp');
+    document.getElementById('surat').classList.remove('disp');
+    
+}
+
+function displaySur() {
+
+    document.getElementById('surat').classList.add('disp');
+    document.getElementById('raipur').classList.remove('disp');
+    document.getElementById('mumbai').classList.remove('disp');
+    
+}
+
+
+// document.getElementById('mum').onclick = dispalyMum();
